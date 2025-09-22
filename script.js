@@ -28,6 +28,8 @@ taskForm.addEventListener("submit", function (e) {
   // });
 
   li.appendChild(span);
+  li.appendChild(doneBtn);
+  li.appendChild(deleteBtn);
 
   taskList.appendChild(li);
 
