@@ -16,10 +16,20 @@ taskForm.addEventListener("submit", function (e) {
   span.textContent = taskInput.value;
   // button
   const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete";
+  deleteBtn.textContent = "Remove";
+
+  deleteBtn.addEventListener("click", function () {
+    taskList.removeChild(li);
+  });
 
   const doneBtn = document.createElement("button");
   doneBtn.textContent = "Done";
+
+  doneBtn.addEventListener("click", function () {
+    span.style.textDecoration = "line-through";
+    span.style.color = "gray";
+    doneBtn.disabled = true;
+  });
 
   li.appendChild(span);
   li.appendChild(doneBtn);
